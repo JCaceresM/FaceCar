@@ -54,12 +54,20 @@
     "eslint": "^7.21.0",
     "eslint-plugin-react": "^7.22.0",
     "husky": "^5.1.2",
+    "lint-staged": "^10.5.4",
     "prettier": "2.2.1",
     "typescript": "^4.2.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "prettier:check"
+    ]
   }
 }
