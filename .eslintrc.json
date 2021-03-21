@@ -17,7 +17,10 @@
     },
     "ecmaVersion": 12
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
   "rules": {
     "no-console": "error",
     "camelcase": "off",
@@ -27,10 +30,15 @@
         "ignoreCase": true,
         "ignoreDeclarationSort": true,
         "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+        "memberSyntaxSortOrder": [
+          "none",
+          "all",
+          "multiple",
+          "single"
+        ]
       }
     ],
-    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-explicit-any": "off",
     "import/no-unused-modules": "off",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "error",

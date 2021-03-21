@@ -1,15 +1,14 @@
+import { ConfigProvider } from 'antd'
 import React from 'react'
-import { firebaseConfig } from './firebaseConfig'
-import 'firebase/firestore'
+import Spanish from 'antd/lib/locale/es_ES'
+import Routes from './routes'
 import './styles/index.less'
-import { FirebaseAppProvider } from 'reactfire'
-import { Result } from 'antd'
 
 function App(): React.ReactElement {
   return (
-    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-      <Result />
-    </FirebaseAppProvider>
+    <ConfigProvider locale={Spanish}>
+      <Routes />
+    </ConfigProvider>
   )
 }
 
