@@ -1,27 +1,15 @@
-
-import React from 'react';
-import logo from './logo.svg';
-import './styles/index.less';
+import { ConfigProvider } from 'antd'
+import React from 'react'
+import Spanish from 'antd/lib/locale/es_ES'
+import Routes from './routes'
+import './styles/index.less'
 
 function App(): React.ReactElement {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ConfigProvider locale={Spanish}>
+      <Routes />
+    </ConfigProvider>
+  )
 }
 
-export default App;
+export default App
