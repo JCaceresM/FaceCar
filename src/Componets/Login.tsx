@@ -1,23 +1,38 @@
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Avatar, Button, Col, Form, Input, Row } from 'antd';
-import React from 'react';
-import { loggIn } from '../firebase/auth';
-import CustomLayoutBoxShadow from './LayoutBoxShadow';
+import { LockOutlined, UserOutlined } from '@ant-design/icons'
+import { Avatar, Button, Col, Divider, Form, Input, Row } from 'antd'
+import React from 'react'
+import { useHistory } from 'react-router-dom'
+import { loggIn } from '../firebase/auth'
+import CustomLayoutBoxShadow from './LayoutBoxShadow'
 const { Item } = Form
+import { Image,  } from 'antd'
+
 const { Password } = Input
 const Login = (): React.ReactElement => {
+  const route = useHistory()
   return (
     <Row
       justify={'center'}
       align={'middle'}
       style={{ textAlign: 'center', height: '100vh' }}
     >
-      <Col xs={8}>
+      <Col xs={6}>
         <CustomLayoutBoxShadow>
-          <Row>
-            <Col xs={24} style={{ margin: '2%' }}>
+          <Row style={{ height: '60vh' }}>
+            <Col xs={24} style={{ margin: '1%' }}>
               {' '}
-              <Avatar size={64} icon={<UserOutlined />} />
+              <Avatar
+              shape="square"
+                size={64}
+                src={
+                  <Image
+                  
+                    preview={false}
+                    width={'100%'}
+                    src={`assets/FondoNegro.jpg`}
+                  />
+                }
+              />
             </Col>
             <Col xs={24}>
               <Form
@@ -36,10 +51,7 @@ const Login = (): React.ReactElement => {
                     },
                   ]}
                 >
-                  <Input
-                    prefix={<UserOutlined />}
-                    placeholder={'Usuario'}
-                  />
+                  <Input prefix={<UserOutlined />} placeholder={'Usuario'} />
                 </Item>
                 <Item
                   required
@@ -67,6 +79,17 @@ const Login = (): React.ReactElement => {
                   </Button>
                 </Item>
               </Form>
+              <Divider style={{ padding: 0, margin: 0 }} orientation={'center'}>
+                o
+              </Divider>
+              <Button
+                onClick={() => {
+                  route.push('SIGNIN')
+                }}
+                type={'link'}
+              >
+                Registrar
+              </Button>
             </Col>
           </Row>
         </CustomLayoutBoxShadow>
