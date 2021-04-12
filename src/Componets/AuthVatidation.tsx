@@ -9,6 +9,8 @@ const AuthVatidation = ( props:Props): React.ReactElement => {
   router = useHistory()
   dbAuth.onAuthStateChanged((user: any) => {
   if (user) {
+    // eslint-disable-next-line no-console
+    console.log(user);
     router.push('/HOME')
   } else {
     router.push('/LOGIN')

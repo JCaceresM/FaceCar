@@ -16,11 +16,23 @@ const loggIn = (email: string, password: string): Promise<any> => {
       return error
     })
 }
-const signIn = (email: string, password: string): void => {
+const signIn = (nombre: string, email: string, password: string,phonenumber: number): void => {
   dbAuth
     .createUserWithEmailAndPassword(email, password)
-    .then((user) => {
-      return user
+    .then((result) => {
+      (result.user as  any).updateProfile({
+        displayName: nombre,
+        phoneNumber: phonenumber
+    }).then(function() {
+        // Update successful.
+    }, function(error: { message: any }) {
+         showNotification({
+        title: 'Error',
+        description: error.message,
+        type: 'error',
+      })
+    });        
+      return result
     })
     .catch((error) => {
       showNotification({

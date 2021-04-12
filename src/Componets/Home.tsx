@@ -8,7 +8,6 @@ import {
   UserOutlined
 } from '@ant-design/icons'
 import {
-  Avatar,
   Button,
   Card,
   Col,
@@ -20,9 +19,9 @@ import {
   Tooltip,
   Typography
 } from 'antd'
-
 import React from 'react'
 import { signOut } from '../firebase/auth'
+
 const { Meta } = Card
 const { Title } = Typography
 const Home = (): React.ReactElement => {
@@ -113,9 +112,9 @@ const Home = (): React.ReactElement => {
                     // ]} Para owners todo no eliminar 
                   >
                     <Meta
-                      avatar={
-                        <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                      }
+                      // avatar={
+                      //   <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                      // }
                       title="Mazda CX-5 2019"
                       description="Carro electrico"
                     />
@@ -143,9 +142,9 @@ const Home = (): React.ReactElement => {
                     // ]} Para owners todo no eliminar 
                   >
                     <Meta
-                      avatar={
-                        <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                      }
+                      // avatar={
+                      //   <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                      // }
                       title="Mazda CX-5 2019"
                       description="Carro electrico"
                     />
@@ -173,9 +172,9 @@ const Home = (): React.ReactElement => {
                     // ]} Para owners todo no eliminar 
                   >
                     <Meta
-                      avatar={
-                        <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                      }
+                      // avatar={
+                      //   <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                      // }
                       title="Mazda CX-5 2019"
                       description="Carro electrico"
                     />
